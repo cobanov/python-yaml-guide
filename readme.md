@@ -29,7 +29,7 @@ with open("config.yaml") as f:
 print(cfg)
 ```
 
-```json
+```python
 {'maintainer': 'Mert Cobanov',
  'pca_params': {'n_components': 224},
  'umap_params': {'metrics': ['euclidean', 'l1', 'manhattan', 'chebyshev'],
@@ -42,9 +42,10 @@ print(cfg)
 
 ```python
 print(config['pca_params'])
+
+#'n_components': 224
 ```
 
-'n_components': 224
 
 ## Updating YAML with Python
 
@@ -54,9 +55,6 @@ Here's an example of how to update a YAML file using Python:
 
 ```python
 cfg["n_components"] = 0.2
-```
-
-```python
 cfg["umap_params"]["metrics"].append("chebyshev")
 ```
 
